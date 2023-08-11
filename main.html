@@ -13,12 +13,12 @@
         <div class="container">
                 <h1><a href="#" class="logo"><img src="images/logo.png" width="100px"></a></h1>
 
-            <nav class="navbar" data-navbar>
-                <ul class="navbar-list">
+            <nav class="navbar" >
+                <ul class="navbar-list" data-navbar>
                     <li class="pere"><a href="#" data-nav-link>Home</a></li>
-                    <li><a href="#" data-nav-link>About Us</a></li>
+                    <li><a href="#about" data-nav-link>About Us</a></li>
                     <li><a href="#" data-nav-link>Projects</a></li>
-                    <li><a href="#" data-nav-link>Contact Us</a></li>
+                    <li><a href="#contact" data-nav-link>Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -35,10 +35,11 @@
 
     <!-- THIS IS SECTION FOR HERO -->
     <section class="hero">
-        <div class="hero container">
+        <div class="container">
             <div class="hero-content">
-                <h1>Beaver<span></span></h1>
-                   <span> Designs and Builds
+                <h1>Beaver<span></span>
+                    <span> <br>
+                    Designs and Builds
                     the World's Toughest Projects.</span>
                 </h1>
 
@@ -60,46 +61,56 @@
     <!-- this section for about -->
 
     <section class="about" id="about">
+        <h1>About Us</h1>
         <div class="container">
             <div class="about-content">
-                <p class="about-subtitle">Co-founders Bright & his brother Leo Schwieters 
-                    quickly built a solid reputation for quality 
-                    and dependability in the Twin Cities’ framing industry.
-                </p>
 
-                <video controls>
-                    <img src="videos/about.vd.mp4" width="320px" height="240">
-                </video>
-
-                <div>
-                <p class="about-title"><strong>OVER 40 YEARS</strong> OF INNOVATIVE CONSTRUCTION SOLUTIONS<br></p>
-                
-                <p class="text">
-                    Our goal is to retain the best labor force in the metro area.<br><br>
-                    Beaver Builders Construction is a one-stop building shop, 
-                    with one point of contact from beginning to end.<br><br>
-                    
-                    We offer the highest quality turnkey solutions for residential and commercial buildings. 
-                    Our passion, professionalism, quality, and experience are evident in each and every building we frame.<br><br>
-                    
-                    <b>Beaver Builders remain committed to innovation and improvement.</b> 
-                    By incorporating new technologies and techniques into our legendary work ethic, 
-                    JL Schwieters continues to offer the industry’s best, greenest, 
-                    and most affordable solutions to your construction needs.
-                </p>
-
-                <img src="images/aboutimg.jpg" class="about-img">
+                <div class="about-list">
+                    <p class="about-subtitle">Co-founders Bright & his brother Leo Schwieters 
+                        quickly built a solid reputation for quality 
+                        and dependability in the Twin Cities’ framing industry.
+                    </p>
+    
                 </div>
+                
+
+                <div class="about-list2">
+                    <img src="images/aboutimg.jpg" class="about-img">
+
+                    <video controls>
+                        <img src="videos/about.vd.mp4" width="320px" height="240">
+                    </video>
+                </div>
+                
+                
+                
+
+                <div class="about-list3">
+                    <p class="about-title"><strong>OVER 40 YEARS</strong> OF INNOVATIVE CONSTRUCTION SOLUTIONS<br></p>
+                
+                    <p class="about-subtitle">
+                        Our goal is to retain the best labor force in the metro area.<br><br>
+                        Beaver Builders Construction is a one-stop building shop, 
+                        with one point of contact from beginning to end.<br><br>
+                        
+                        We offer the highest quality turnkey solutions for residential and commercial buildings. 
+                        Our passion, professionalism, quality, and experience are evident in each and every building we frame.<br><br>
+                    </p>
+                
+                </div>
+                
             </div>
+        </div>
 
             <h1>OUR TEAM</h1>
 
+        <div class="team-section">    
             <div class="team">
                 
                 <img src="images/about.badge.avif" class="team-img">
 
                 <blockquote>Pat Schwieters</blockquote>
-                <p class="text">General Manager</p>
+                <p class="text-title">General Manager</p>
 
                 <p class="text">
                     Jim has over 35 years of experience 
@@ -107,12 +118,12 @@
                     Jim coordinates between designers and
                 </p>
             </div>
-
+        
             <div class="team">
                 
                 <img src="images/about.badge.jpg" class="team-img">
                 <blockquote>Pat Schwieters</blockquote>
-                <p class="text">General Manager</p>
+                <p class="text-title">General Manager</p>
 
                 <p class="text">
                     Jim has over 35 years of experience 
@@ -124,7 +135,7 @@
              
                 <img src="images/about.badge1.jpg" class="team-img">
                 <blockquote>Pat Schwieters</blockquote>
-                <p class="text">General Manager</p>
+                <p class="text-title">General Manager</p>
                 <p class="text">
                     Jim has over 35 years of experience 
                     with JL Schwieters, joining the team in 1984. Jim started as a Field Carpenter, working his way up to a Field Manager, and is currently a Production Manager. 
@@ -164,7 +175,7 @@
 
     <!--  -->
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="col-left">
                 <form>
@@ -172,7 +183,7 @@
                     <input placeholder="Name" type="name">
                     <input placeholder="Email" type="email">
 
-                    <textarea type="messge"></textarea>
+                    <textarea type="message"></textarea>
 
                     <input type="submit" value="send message">
                 </form>

@@ -8,33 +8,40 @@ html {
   font-size: 80.7%;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header {
-  background: #f2f2f2;
-  position: absolute;
-  top: -25px;
+  position: fixed;
+  top: -20px;
   left: 0;
   width: 100%;
-  padding-top: 5em;
-  padding-block: 20px;
-  -webkit-border-after: 1px solid rgb(13, 12, 12);
-          border-block-end: 1px solid rgb(13, 12, 12);
+  border-block-end: 1px solid rgb(13, 12, 12);
   z-index: 4;
 }
 .header.active {
   color: black;
-  position: fixed;
-  top: -2px;
-  left: 0;
-  background-color: white;
+  background-color: #f2f2f2;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.header .logo img {
+  width: 40px;
 }
 
 .navbar {
+  width: 100%;
+}
+
+.navbar-list {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -45,24 +52,18 @@ html {
   height: 0;
   overflow: hidden;
   visibility: hidden;
-  transition: 0.4s;
+  transition: 0.4s ease-in;
 }
-.navbar.active {
+.navbar-list.change {
   height: 236px;
   visibility: visible;
-}
-
-.navbar-list {
-  margin-block: 10px;
-  padding: 0;
-  margin: 0;
 }
 .navbar-list li {
   list-style-type: none;
 }
 .navbar-list li a {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2.2em;
   padding: 10px 15px;
   font-weight: 500;
   color: inherit;
@@ -118,12 +119,9 @@ section {
 
 .hero {
   text-align: center;
-  background: url("../images/hero.bg.jpg");
+  background: url("../images/herelg.jpg") center fixed;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.hero .container {
-  display: flex;
 }
 
 .hero h1 {
@@ -138,104 +136,89 @@ section {
   animation-delay: 1.5s;
 }
 
-.hero h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: crimson;
-  animation: text_reveal_box 1s ease;
-  animation-delay: 0.5s;
-}
-.hero h1 span:nth-child(1) span {
-  animation-delay: 0.5s;
-}
-@keyframes text_reveal {
-  0% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateY(20%);
-  }
-}
-
 .hero .sub-head {
   font-size: 1.5em;
-  color: black;
-  -webkit-margin-after: 25px;
-          margin-block-end: 25px;
+  color: white;
+  margin-block-end: 25px;
 }
 
 .hero span {
   color: red;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .hero-btn {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 2px;
   color: black;
   background-color: blue;
   border: 2px solid skyblue;
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 1rem;
-  margin-top: 50px;
-  transition: 0.3s ease;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  transition: 1s ease;
   transition-property: background-color, color;
 }
 .hero-btn:hover {
   color: white;
+  transition: 1s ease;
   background-color: crimson;
 }
 
 .about {
   text-align: center;
 }
+.about h1 {
+  font-size: 53px;
+}
 .about .container {
-  justify-content: center;
-  padding: 15px;
-  gap: 1em;
+  padding: 7% 0;
+}
+.about .about-content {
+  display: flex;
+  justify-content: space-between;
+}
+.about .about-list {
+  flex-basis: 20%;
+}
+.about .about-list2 {
+  flex-basis: 45%;
+}
+.about .about-list3 {
+  flex-basis: 25%;
+}
+.about .team-section {
+  display: flex;
+}
+.about .team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.about .team img {
+  padding: 20px;
+  margin: 20px;
+  width: 240px;
+}
+.about .team blockquote {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.about .team .text-title {
+  font-size: 20px;
+  color: crimson;
+}
+.about .team .text {
+  text-align: justify;
+  font-size: 15px;
 }
 
-.about-content {
-  font-size: 1em;
-}
-.about-content .about-subtitle {
-  color: blue;
-  align-items: center;
-}
-
-div .about-title {
-  font-size: 2em;
-  background: #f2f2f2;
-}
-
-div .text {
-  background: #f2f2f2;
-  text-align: left;
-  align-items: center;
-  text-align: center;
-}
-
-div .about-img {
-  width: 400px;
-  height: 250px;
-}
-
-.team {
-  padding: 2em;
-  margin: 1.5em;
-}
-
-.team-img {
-  width: 400px;
-}
-
+/* project section*/
 .project {
   text-align: center;
+  padding-top: 500px;
 }
 
 .project-content h2 {
@@ -305,11 +288,6 @@ input[type=submit]:hover {
   .nav-toggle-btn {
     display: none;
   }
-  .header .container {
-    display: grid;
-    grid-template-columns: 180px auto;
-    justify-content: unset;
-  }
   .header .navbar {
     display: flex;
     justify-content: space-between;
@@ -321,6 +299,12 @@ input[type=submit]:hover {
   }
   .header .navbar .navbar-list {
     display: flex;
+    height: 236px;
+    visibility: visible;
+    background: none;
+    top: 30px;
+    left: 100%;
+    gap: 80px;
   }
   .header .navbar a {
     color: black;
@@ -331,43 +315,50 @@ input[type=submit]:hover {
     font-weight: bold;
   }
 }
-@media only screen and (min-width: 1080px) {
-  .container {
-    width: 1080px;
-    margin: 0 auto;
-  }
-  .hero .container {
+@media only screen and (max-width: 768px) {
+  .about .about-content {
     display: flex;
     justify-content: space-between;
-    text-align: left;
+    flex-direction: column;
   }
-  .hero-content {
-    align-items: center;
-    margin: 3em 3em 0 5em;
+  .about .about-list,
+  .about .about-list2,
+  .about .about-list3 {
+    display: flex;
+    flex-direction: column;
   }
-  h1 {
-    font-size: 3em;
-    width: 90%;
+  .about .about-subtitle {
+    font-size: 16px;
+    text-align: justify;
+    margin: 10px;
+    padding: 20px;
   }
-  h1 span {
-    color: blue;
+  .about .about-list2 {
+    margin: 10px;
+    padding: 20px;
   }
-  .about {
-    position: relative;
+  .about .about-list2 img {
+    margin-bottom: 10px;
   }
-  .about-subtitle {
-    font-size: 2em;
+  .about .team-section {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
   }
   .about .team {
-    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
   }
-  .about blockquote {
-    font-size: 3em;
+  .about .team img {
+    padding: 20px;
+    margin: 20px;
+    width: 240px;
   }
-  .contact-section {
-    position: relative;
+  .about .team blockquote {
+    font-size: 23px;
+    text-transform: uppercase;
   }
-  .contact-section .container {
-    display: flex;
+  .about .team .text-title {
+    font-size: 20px;
+    color: crimson;
   }
 }/*# sourceMappingURL=style.css.map */

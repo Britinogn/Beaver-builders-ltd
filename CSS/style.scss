@@ -2,46 +2,49 @@
 
 body{
     margin: 0;
-    font-family: 'poppins';
-    // background: #f2f2f2;
+    font-family: 'poppins';  
 }
 
 html{
     font-size: 80.7%;
 }
 
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .header{
-    background: #f2f2f2;
-
-    position:absolute;
-
-    top: -25px;
+    position:fixed;
+    top: -20px;
     left: 0;
     width: 100%;
-    padding-top: 5em;
-    padding-block: 20px;
     border-block-end: 1px solid rgb(13, 12, 12);
     z-index: 4;
 
     &.active{
         color: black;
-
-        position: fixed;
-
-        top: -2px;
-        left: 0;
-        background-color: white;
+        background-color: #f2f2f2;
     }
 }
 
 .header .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+
+.header{
+    .logo img{
+        width: 40px;
+    }
 }
 
 
 .navbar {
+   width: 100%;
+  }
+
+  .navbar-list{
     position:absolute;
     top: 100%;
     left: 50%;
@@ -52,25 +55,19 @@ html{
     height: 0;
     overflow: hidden;
     visibility: hidden;
-    transition: .4s;
+    transition: .4s ease-in;
 
-    &.active{
+    &.change{
         height: 236px;
         visibility: visible;
     }
-  }
-
-  .navbar-list{
-    margin-block: 10px;
-    padding: 0;
-    margin: 0;
 
     li{
         list-style-type: none;
 
         a{
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 2.2em;
             padding: 10px 15px;
             font-weight: 500;
             color: inherit;
@@ -125,13 +122,12 @@ section{
 
 .hero{
     text-align: center;
-    background: url('../images/hero.bg.jpg');
+    background: url('../images/herelg.jpg') center fixed;
+    // background: linear-gradient rgba(0,0,0,0), rgba(0,0,0,0), url(../images/herelg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
-    .container{
-        display: flex;
-    }
+    // background: black;
+    // opacity: 0.2;
 }
 
 .hero h1{
@@ -146,126 +142,116 @@ section{
     animation-delay: 1.5s;
 }
 
-.hero h1 span{ 
-
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    height: 100%; 
-    width: 0; 
-    background-color: crimson; 
-    animation: text_reveal_box 1s ease;
-    animation-delay: .5s;
-
-    &:nth-child(1) span{ 
-        animation-delay: .5s;
-    }
-
-@keyframes text_reveal {
-    0%{
-        transform: translateX(10px);
-    }
-
-    100%{
-        transform: translateY(20%);
-    }
-}
-}
-
 .hero .sub-head{
     font-size: 1.5em;
-    color: black;
+    color: white;
     margin-block-end: 25px;
 }
 
 .hero span{
     color: red;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .hero-btn {
     display: inline-block; 
-    padding: 10px 30px; 
+    padding: 10px 2px; 
     color: black; 
     background-color: blue; 
     border: 2px solid skyblue; 
     font-size: 2rem; 
     text-transform: uppercase; 
     text-decoration: none;
-    letter-spacing: 1rem; 
-    margin-top: 50px; 
-    transition:  .3s ease; 
+    letter-spacing:2px; 
+    margin-top: 10px; 
+    transition:  1s ease; 
     transition-property: background-color, color;
 
     &:hover{
         color: white;
-    background-color: crimson;
+        transition:  1s ease; 
+        background-color: crimson;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // about section
 .about{
     text-align: center;
 
+    h1{
+        font-size: 53px;
+    }
     .container{
-        justify-content: center;
-        padding: 15px;
-        gap: 1em;
+        padding: 7% 0;
     }
-}
 
-.about-content{
-    font-size:1em;
-    
-
-    .about-subtitle{
-        color:blue;
-        align-items: center;
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+        // flex-direction:row;
     }
+
+    .about-list{
+        flex-basis: 20%;
+    }
+
+    .about-list2{
+        flex-basis:45%;
+    }
+
+    .about-list3{
+        flex-basis: 25%;
+    }
+
+
+    .team-section{
+       display: flex;
+    }
+
+    .team{
+
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+
+        img{
+            padding: 20px;
+            margin: 20px;
+            width: 240px;
+        }
+
+        blockquote{
+            font-size: 23px;
+            text-transform: uppercase;
+        }
+
+        .text-title{
+            font-size: 20px;
+            color: crimson;
+        }
+
+        .text{
+            text-align: justify;
+            font-size: 15px;
+        }
+    }
+
+
+
+
+
+
+
+
 }
 
-div .about-title{
-    font-size: 2em;
-    background: #f2f2f2;
-}
 
-div .text{
-    background: #f2f2f2;
-    text-align: left;
-    align-items: center;
-    text-align: center;
-}
-
-div .about-img{
-    width: 400px;
-    height: 250px;
-}
-
-.team{
-    padding: 2em;
-    margin: 1.5em;
-}
-
-.team-img{
-    width: 400px;
-}
+/* project section*/
 
 .project{
     text-align: center;
+    padding-top: 500px;
 }
 
 .project-content{
@@ -350,12 +336,6 @@ input[type="submit"]:hover{
         display:  none;
     }
 
-    .header .container{
-        display: grid;
-        grid-template-columns: 180px auto;
-        justify-content: unset;
-    }
-
     .header .navbar{
         display: flex;
         justify-content: space-between;
@@ -367,6 +347,13 @@ input[type="submit"]:hover{
 
         .navbar-list{
             display: flex;
+            height: 236px;
+            visibility: visible;
+            background:none;
+            top: 30px;
+            left: 100%;
+            gap: 80px;
+
         }
 
         a{
@@ -381,60 +368,156 @@ input[type="submit"]:hover{
     }
 }
 
-@media only screen and (min-width: 1080px){
-    .container{
-        width: 1080px;
-        margin: 0 auto;
-    }
-
-    .hero .container{
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .hero-content{
-        align-items: center;
-        margin: 3em 3em 0 5em;
-    }
-
-    h1{
-        font-size: 3em;
-        width: 90%;
-
-        span{
-            color: blue;
-        }
-    }
+@media only screen and (max-width:768px){
 
     .about{
-        position: relative;
-    }
-
-    .about-subtitle{
-        font-size: 2em;
-    }
-
-
-    .about{
-        .team{
+        .about-content{
             display: flex;
+            justify-content: space-between;
+            flex-direction:column;
+        }
+        
+        .about-list,
+        .about-list2,
+        .about-list3{
+            display: flex;
+            flex-direction:column;
         }
 
-        blockquote{
-            font-size: 3em;
+        .about-subtitle{
+            font-size: 16px;
+            text-align: justify;
+            margin: 10px;
+            padding: 20px;
         }
-    }
+
+        .about-list2{
+            margin: 10px;
+            padding: 20px;
+
+            img{
+                margin-bottom: 10px;
+            }
+        }
+
+
+        // team
+
+        .team-section{
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 30px;
+        }
+
+        .team{
+
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 30px;
+
+            img{
+                padding: 20px;
+                margin: 20px;
+                width: 240px;
+            }
+    
+            blockquote{
+                font-size: 23px;
+                text-transform: uppercase;
+            }
+    
+            .text-title{
+                font-size: 20px;
+                color: crimson;
+            }
+        }
+    
+    }  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // .container{
+    //     width: 1080px;
+    //     margin: 0 auto;
+    // }
+
+    // .hero .container{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     text-align: left;
+    // }
+
+    // .hero-content{
+    //     align-items: center;
+    //     margin: 3em 3em 0 5em;
+    // }
+
+    // h1{
+    //     font-size: 3em;
+    //     width: 90%;
+
+    //     span{
+    //         color: blue;
+    //     }
+    // }
+
+    // .about{
+    //     position: relative;
+    // }
+
+    // .about-subtitle{
+    //     font-size: 2em;
+    // }
+
+
+    // .about{
+    //     .team{
+    //         display: flex;
+
+
+    //         .text{
+    //             top: 3em;
+    //         }
+           
+    //     }
+
+    //     blockquote{
+    //         font-size: 3em;
+    //     }
+    // }
 
     
-    .contact-section{ 
-        position: relative; 
+    // .contact-section{ 
+    //     position: relative; 
 
-        .container{ 
-            display: flex;
-        }
-    } 
-}
+    //     .container{ 
+    //         display: flex;
+    //     }
+    // } 
 
 
 
