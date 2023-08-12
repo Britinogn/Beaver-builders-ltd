@@ -291,7 +291,8 @@ section{
 
 .contact{
     text-align: center;
-    
+    padding-bottom: 20px;
+
     h1{
         font-size: 50px;
     }
@@ -359,10 +360,9 @@ section{
 .footer{
     background-color: black;
     color: white;
-    font-size: 20px;
     text-align: center;
 
-    p, a{
+    p,a{
         color: white;
         display: inline-block;
     }
@@ -458,4 +458,9 @@ section{
             overflow: hidden;
         }
     }
+
+    
+  .footer{
+    
+  }
 }

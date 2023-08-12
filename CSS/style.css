@@ -245,6 +245,7 @@ section {
 /* contact section*/
 .contact {
   text-align: center;
+  padding-bottom: 20px;
 }
 .contact h1 {
   font-size: 50px;
@@ -302,7 +303,6 @@ section {
 .footer {
   background-color: black;
   color: white;
-  font-size: 20px;
   text-align: center;
 }
 .footer p, .footer a {
