@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beaver Builders Company LTD.</title>
-    <link rel="icon" href="images/">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
     <header class="header" data-header>
@@ -17,7 +18,7 @@
                 <ul class="navbar-list" data-navbar>
                     <li class="pere"><a href="#" data-nav-link>Home</a></li>
                     <li><a href="#about" data-nav-link>About Us</a></li>
-                    <li><a href="#" data-nav-link>Projects</a></li>
+                    <li><a href="#project" data-nav-link>Projects</a></li>
                     <li><a href="#contact" data-nav-link>Contact Us</a></li>
                 </ul>
             </nav>
@@ -102,44 +103,61 @@
             </div>
         </div>
 
-            <h1>OUR TEAM</h1>
+        <h1 class="team1">OUR TEAM</h1>  
 
-        <div class="team-section">    
+        <div class="team-section"> 
+             
             <div class="team">
                 
-                <img src="images/about.badge.avif" class="team-img">
+                <div>
+                    <img src="images/about.badge.avif" class="team-img">
+                </div>
 
-                <blockquote>Pat Schwieters</blockquote>
-                <p class="text-title">General Manager</p>
+                <div>
+                    <blockquote>Pat Schwieters</blockquote>
+                    <p class="text-title">General Manager</p>
 
-                <p class="text">
+                    <p class="text">
                     Jim has over 35 years of experience 
                     with JL Schwieters, joining the team in 1984. Jim started as a Field Carpenter, working his way up to a Field Manager, and is currently a Production Manager. 
                     Jim coordinates between designers and
-                </p>
+                    </p>
+                </div>
             </div>
         
             <div class="team">
-                
-                <img src="images/about.badge.jpg" class="team-img">
-                <blockquote>Pat Schwieters</blockquote>
-                <p class="text-title">General Manager</p>
 
-                <p class="text">
+                <div>
+                    <img src="images/about.badge.jpg" class="team-img">
+                </div>
+
+                <div>
+                    <blockquote>Pat Schwieters</blockquote>
+                    <p class="text-title">General Manager</p>
+
+                    <p class="text">
                     Jim has over 35 years of experience 
                     with JL Schwieters, joining the team in 1984. Jim started as a Field Carpenter, working his way up to a Field Manager, and is currently a Production Manager. 
-                    Jim coordinates between designers and</p>
+                    Jim coordinates between designers and
+                    </p>
+                </div>
             </div>
 
             <div class="team">
-             
-                <img src="images/about.badge1.jpg" class="team-img">
-                <blockquote>Pat Schwieters</blockquote>
-                <p class="text-title">General Manager</p>
-                <p class="text">
+                <div>
+                    <img src="images/about.badge1.jpg" class="team-img">
+                </div>
+
+                <div>
+                    <blockquote>Pat Schwieters</blockquote>
+                    <p class="text-title">General Manager</p>
+
+                    <p class="text">
                     Jim has over 35 years of experience 
                     with JL Schwieters, joining the team in 1984. Jim started as a Field Carpenter, working his way up to a Field Manager, and is currently a Production Manager. 
-                    Jim coordinates between designers and</p>
+                    Jim coordinates between designers and
+                    </p>
+                </div>
             </div>
             
         </div>
@@ -147,12 +165,14 @@
 
     <!--  -->
 
-    <section class="project" id="projects">
-        <div class="container">
-            <div class="project-content">
-                <p>PROJECTS</p>
+    <section class="project" id="project">
+        <h1>PROJECTS</h1>
 
-                <h2>Engineering, Procurement and Construction Projects Around the World</h2>
+        <div class="container">
+
+            <div class="project-content">
+
+                <h4>Engineering, Procurement and Construction Projects Around the World</h4>
                 <p class="text">
                     Fluor is building a better future
                     by applying world-class expertise to solve clients’ 
@@ -161,7 +181,7 @@
                     services that are the essential building blocks of development and progress.
                 </p>
 
-                <div class="ul"> View a sampling of Fluor's projects:
+                <div class="ul"> View a sampling of beaver's builders projects:
                     <li><a href="#">Energy Solutions</a></li>
                     <li><a href="#">Urban Solutions</a></li>
                     <li><a href="#">Mission Solutions</a></li>
@@ -169,21 +189,23 @@
                 </div>
 
             </div>
-         </div>
+        </div>
     </section>
 
 
     <!--  -->
 
     <section class="contact" id="contact">
+        <h1>CONTACT</h1>
+
         <div class="container">
             <div class="col-left">
                 <form>
                     <!-- <label for="name">Name</label> -->
-                    <input placeholder="Name" type="name">
-                    <input placeholder="Email" type="email">
+                    <input placeholder="Name" type="text">
+                    <input placeholder="Email" type="text">
 
-                    <textarea type="message"></textarea>
+                    <textarea type="text" placeholder="Message"></textarea>
 
                     <input type="submit" value="send message">
                 </form>
@@ -191,8 +213,15 @@
         </div>
     </section>
 
+    <section class="footer">
+        <p>&copy</p>
+        <script>
+            document.write(new Date().getFullYear());
+        </script> 
+        <a href="https://brightonwuemeri.com/" target="_blank">Bright Onwuemeri</a>
+    </section>
+
     <script src="script.js"></script>
 
-    
 </body>
 </html>
